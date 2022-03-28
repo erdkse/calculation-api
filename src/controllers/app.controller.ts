@@ -1,4 +1,4 @@
-import {Controller, Get} from '@nestjs/common';
+import {Controller, Get, Query} from '@nestjs/common';
 import {AppService} from '@services/app.service';
 
 @Controller()
@@ -8,5 +8,13 @@ export class AppController {
     @Get()
     getHello(): object {
         return this.appService.getHello();
+    }
+
+    @Get('sum')
+    sum(
+        @Query('value1') value1: number,
+        @Query('value2') value2: number
+    ): object {
+        return {result: this.appService.sum(value1, value2)};
     }
 }

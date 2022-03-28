@@ -1,4 +1,6 @@
-FROM node:14.16.1 AS builder
+
+
+FROM node:16.6.2-bullseye-slim AS builder
 
 WORKDIR /usr/app
 
@@ -8,7 +10,7 @@ COPY ./src ./src
 
 RUN npm i --quiet && npm run build
 
-FROM node:14.16.1-alpine
+FROM node:16.6.2-bullseye-slim
 
 WORKDIR /app
 
