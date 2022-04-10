@@ -22,4 +22,4 @@ COPY --from=builder /usr/app/package.json ./
 
 RUN npm i --quiet --only=production
 
-CMD ["node", "src/main.js"]
+CMD ["node", "main.js"]
