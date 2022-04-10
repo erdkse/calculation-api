@@ -1,6 +1,6 @@
 {
     "name": "nestjs-api-boilerplate",
-    "version": "1.0.0",
+    "version": "0.0.0",
     "description": "",
     "main": "src/main.ts",
     "author": "Erdi Köse <me@erdkse.com>",
